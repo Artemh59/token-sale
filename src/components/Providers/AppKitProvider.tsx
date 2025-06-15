@@ -2,7 +2,7 @@
 
 import { createAppKit } from '@reown/appkit/react';
 import { EthersAdapter } from '@reown/appkit-adapter-ethers';
-import { mainnet } from '@reown/appkit/networks';
+import { mainnet, sepolia } from '@reown/appkit/networks';
 
 const metadata = {
   name: 'Best Token',
@@ -20,7 +20,7 @@ if (!projectId) {
 createAppKit({
 	adapters: [new EthersAdapter()],
 	metadata,
-	networks: [mainnet],
+	networks: [mainnet, sepolia],
 	projectId,
 });
 export function AppKitProvider({ children }: { children: React.ReactNode }) {
