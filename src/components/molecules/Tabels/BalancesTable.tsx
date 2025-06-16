@@ -5,21 +5,7 @@ import {
   TableHead,
   TableRow,
   TableCell,
-	Typography
 } from '@mui/material';
-import { useEffect, useState } from 'react';
-import { ethers, BrowserProvider, Contract } from 'ethers';
-import TokenAbi from '@/abis/BestToken.json';
-import UsdtAbi from '@/abis/MockUSDT.json';
-import {
-  useAppKitProvider,
-  useAppKitAccount,
-  Provider,
-} from '@reown/appkit/react';
-import {
-  USDT_ADDRESS,
-  TOKEN_ADDRESS,
-} from '@/constants/const';
 
 interface BalancesTabelProp {
 	balances: {
