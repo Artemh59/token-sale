@@ -78,6 +78,12 @@ export default function BuyForm() {
   const handleBuy = async () => {
     if (!walletProvider || !isConnected) return;
 
+    const parsedAmount = parseFloat(amount);
+    if (isNaN(parsedAmount) || parsedAmount <= 0) {
+      toast.error('Please enter a valid amount bigger than 0');
+      return;
+    }
+
     setIsPending(true);
     const provider = new BrowserProvider(walletProvider);
     const signer = await provider.getSigner();
