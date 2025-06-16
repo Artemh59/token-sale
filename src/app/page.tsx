@@ -5,7 +5,7 @@ import {
   Container,
 } from '@mui/material';
 import ConnectButton from '@/components/atoms/buttons/ConnectButton';
-import BuyForm from '@/components/organisms/forms/BuyForm'
+import BuyForm from '@/components/organisms/forms/BuyForm';
 
 export default function App() {
   return (
