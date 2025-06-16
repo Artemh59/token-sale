@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Crypto Presale DApp
+
+## Project Description
+
+This project is a decentralized application (DApp) designed for a cryptocurrency token presale. Users can connect their Web3 wallets (e.g., MetaMask) to purchase presale tokens using either Ethereum (ETH) or USDT (Tether). The DApp provides a user-friendly interface to display current wallet balances for ETH, USDT, and the presale token.
+
+## Features
+
+- Connects to Web3 wallets (via AppKit Provider).
+- Allows purchasing presale tokens with ETH.
+- Allows purchasing presale tokens with USDT (requires USDT approval).
+- Displays real-time balances for ETH, USDT, and the presale token.
+- Provides transaction feedback with success/error messages and Etherscan links.
+- Responsive and modern UI with Material-UI components.
+- Loading states for transactions to enhance user experience.
 
 ## Getting Started
 
-First, run the development server:
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/Artemh59/token-sale
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+### Environment Variables
+
+Create a `.env` file in the root of your project and add this:
+`NEXT_PUBLIC_PROJECT_ID='9e1b6f0b6793fe3f4eba771fd60ab5ef'`
+#I left it here only for easy of use this app and i'll delete this project after your check
+
+### Running the Development Server
+
+To run the application in development mode:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Smart Contracts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+My apicaiton interacts with the following smart contracts:
 
-## Learn More
+- **Presale Contract**: Handles the logic for purchasing tokens with ETH and USDT.
+- **BestToken (ERC-20)**: The main token being sold in the presale.
+- **MockUSDT (ERC-20)**: A mock USDT token used for testing the USDT payment functionality.
 
-To learn more about Next.js, take a look at the following resources:
+## Testing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All core functionalities, including wallet connection, ETH and USDT token purchases, and balance displays, have been thoroughly tested and are working as expected.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Screenshots
 
-## Deploy on Vercel
+### Main application screen displaying user balances
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Main application screen displaying user balances](./public/mainScreen.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Transaction Process
+
+![During transaction image](./public/duringTransaction.png)
