@@ -1,3 +1,6 @@
-export const PRESALE_ADDRESS = '0x1df9656d431ae7F6C4fa6D299E212350c1826A27';
-export const USDT_ADDRESS = '0x291F837D58Fa26e30ce7e3ce0EB41B26A24E73c6';
-export const TOKEN_ADDRESS = '0x979a30a1F642bB817571566752dd7E2Ad739501C';
+// These are newly deployed contracts
+// Some transactions were made on other deployments(but with the same SC code)
+
+export const PRESALE_ADDRESS = '0xDD2E3b42FCA26D8A70e9410D7E3161b0140F185c';
+export const USDT_ADDRESS = '0xE8ae6F919e13bC47Ed7E198a026214494aBFc46e';
+export const TOKEN_ADDRESS = '0x36bDd17C777880028Eb58AC00655Da28B402CF0f';
